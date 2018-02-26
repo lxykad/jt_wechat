@@ -1,1 +1,36 @@
 /* pages/home/home.wxss */
+
+.img {
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.banner {
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.lifo-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10rpx;
+    justify-content: space-around;
+}
+
+.news-list {
+    display: flex;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+
+.news-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.news-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+}
