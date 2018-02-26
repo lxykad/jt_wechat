@@ -23,13 +23,13 @@
                 "selectedIconPath": "pages/img/iv_merits.png"
             },
             {
-                "text": "目录",
+                "text": "祝福",
                "pagePath": "pages/logs/logs",
                 "iconPath": "pages/img/iv_merits.png",
                 "selectedIconPath": "pages/img/iv_merits.png"
             },
             {
-                "text": "我的",
+                "text": "个人中心",
                 "pagePath": "pages/index/index",
                 "iconPath": "pages/img/iv_merits.png",
                 "selectedIconPath": "pages/img/iv_merits.png"

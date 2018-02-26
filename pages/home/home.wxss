@@ -26,6 +26,8 @@
 .news-title {
     display: flex;
     flex-direction: row;
+    background-color: #d1d1d1;
+    width: 100%;
 }
 
 .news-time {

@@ -11,14 +11,13 @@
     <image src="{{fashi}}" class='img' />
     <image src="{{fawu}}" class='img' />
 </view>
-<view wx:for="{{newsList}}" wx:key='' class='news-list'>
+<scroll-view wx:for="{{newsList}}" wx:key='' class='news-list'>
 
-    <view class='news-title'>
+    <view class='news-title' bindtap='onItemClick' data-item='{{item}}'>
         <image src="{{item.image}}" style='width:80px;height:80px' />
         <view class='news-time'>
             <text>{{item.title}}</text>
             <text>{{item.category}}</text>
         </view>
-
     </view>
-</view>
+</scroll-view>

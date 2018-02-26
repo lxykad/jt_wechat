@@ -114,7 +114,7 @@ Page({
         wx.request({
             url: 'https://staging.baifotong.com/news/news',
             success: function (res) {
-                console.log('news list === success')
+                
                 const count = res.data.results.length
 
                 var arr = [];
@@ -125,9 +125,17 @@ Page({
                     arr.push(news)
                 }
                 that.setData({ newsList: arr })
-                console.log(arr)
+                
             }
         })
+    },
+
+    /**
+     * 资讯列表点击事件
+     */
+    onItemClick: function (e) {
+        const item = e.currentTarget.dataset.item
+        console.log(item)
     }
 
 })
