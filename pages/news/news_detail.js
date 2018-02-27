@@ -5,7 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        title: 'default'
+        title: 'title',
+        image:'',
+        desc:''
     },
 
     /**
@@ -18,7 +20,9 @@ Page({
             success: function (res) {
                 var item = JSON.parse(res.data)
                 that.setData({
-                    title: item.title
+                    title: item.title,
+                    image:item.image,
+                    desc:item.description
                 })
             },
         })

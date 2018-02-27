@@ -21,6 +21,7 @@
     display: flex;
     margin-top: 20rpx;
     margin-left: 20rpx;
+    
 }
 
 .news-title {

@@ -1,2 +1,5 @@
 <!--pages/news/news_detail.wxml-->
-<text>{{title}}</text>
+<view class='container'>
+    <image src='{{image}}' class='image'></image>
+    <text class='text'>{{title}}</text>
+</view>

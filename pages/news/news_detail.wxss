@@ -1,1 +1,23 @@
 /* pages/news/news_detail.wxss */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #39c6c1;
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+}
+
+.image {
+    display: flex;
+    width: 100%;
+    height: 220px;
+     
+}
+
+.text {
+    margin-top: 15px;
+}
