@@ -1,0 +1,2 @@
+<!--pages/news/news_detail.wxml-->
+<text>{{title}}</text>

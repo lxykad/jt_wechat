@@ -114,7 +114,7 @@ Page({
         wx.request({
             url: 'https://staging.baifotong.com/news/news',
             success: function (res) {
-                
+
                 const count = res.data.results.length
 
                 var arr = [];
@@ -125,7 +125,7 @@ Page({
                     arr.push(news)
                 }
                 that.setData({ newsList: arr })
-                
+
             }
         })
     },
@@ -135,7 +135,18 @@ Page({
      */
     onItemClick: function (e) {
         const item = e.currentTarget.dataset.item
-        console.log(item)
+        var bean = JSON.stringify(item) // 参数用变量bean先保存起来 再进行传递的话，接收时会无法解析object参数
+        wx.setStorage({
+            key: 'news-item',
+            data: bean,
+        })    
+            // json参数太大 也无法全部传递
+            < wx.navigateTo({
+            url: "/pages/news/news_detail",
+                success: function (res) { },
+                fail: function (res) { },
+                complete: function (res) { },
+            })
     }
 
 })
