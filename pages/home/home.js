@@ -147,6 +147,31 @@ Page({
                 fail: function (res) { },
                 complete: function (res) { },
             })
+    },
+
+    /**
+     * 拜佛
+     */
+    onBaifoClick : function(){
+        console.log("baifo====")
+
+    },
+    /**
+    * 法事
+    */
+    onFashiClick: function () {
+        console.log("fashi====")
+        wx.navigateTo({
+            url: '/pages/event/event',
+        })
+
+    },
+    /**
+    * 法务
+    */
+    onFawuClick: function () {
+        console.log("faw====")
+
     }
 
 })

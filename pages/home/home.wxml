@@ -1,23 +1,27 @@
 <!--pages/home/home.wxml-->
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key=''>
-        <swiper-item>
-            <image src="{{item}}" class="slide-image" style='width:100%;height:250px' />
-        </swiper-item>
-    </block>
-</swiper>
-<view class='lifo-container'>
-    <image src="{{baifo}}" class='img' />
-    <image src="{{fashi}}" class='img' />
-    <image src="{{fawu}}" class='img' />
-</view>
-<scroll-view wx:for="{{newsList}}" wx:key='' class='news-list'>
+<view class='home-container'>
 
-    <view class='news-title' bindtap='onItemClick' data-item='{{item}}'>
-        <image src="{{item.image}}" style='width:80px;height:80px' />
-        <view class='news-time'>
-            <text>{{item.title}}</text>
-            <text>{{item.category}}</text>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" style='width:100%;height:250px' />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='lifo-container'>
+        <image src="{{baifo}}" class='img' bindtap='onBaifoClick' />
+        <image src="{{fashi}}" class='img' bindtap='onFashiClick' />
+        <image src="{{fawu}}" class='img' bindtap='onFawuClick' />
+    </view>
+    <view wx:for="{{newsList}}" wx:key="{{index}}" class='news-list'>
+
+        <view class='news-title' bindtap='onItemClick' data-item='{{item}}'>
+            <image src="{{item.image}}" style='width:80px;height:80px' />
+            <view class='news-time'>
+                <text>{{item.title}}</text>
+                <text>{{item.category}}</text>
+            </view>
         </view>
     </view>
-</scroll-view>
+
+</view>

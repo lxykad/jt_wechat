@@ -3,7 +3,8 @@
         "pages/home/home",
         "pages/index/index",
         "pages/logs/logs",
-        "pages/news/news_detail"
+        "pages/news/news_detail",
+        "pages/event/event"
     ],
     "window": {
         "backgroundTextStyle": "light",
