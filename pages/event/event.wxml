@@ -1,6 +1,4 @@
 
 <view>
     <video class = 'player' src="{{video}}"/>
-
-
 </view>

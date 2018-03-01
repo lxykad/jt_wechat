@@ -4,7 +4,8 @@
         "pages/index/index",
         "pages/logs/logs",
         "pages/news/news_detail",
-        "pages/event/event"
+        "pages/event/event",
+        "pages/userinfo/user-center"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -32,7 +33,7 @@
             },
             {
                 "text": "个人中心",
-                "pagePath": "pages/index/index",
+                "pagePath": "pages/userinfo/user-center",
                 "iconPath": "pages/img/iv_merits.png",
                 "selectedIconPath": "pages/img/iv_merits.png"
             }

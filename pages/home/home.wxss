@@ -1,11 +1,12 @@
 /* pages/home/home.wxss */
-.home-container{
+
+.home-container {
     display: flex;
     flex-direction: column;
 }
 
 .img {
-    height: 200rpx;
+    height: 280rpx;
     width: 200rpx;
 }
 
@@ -19,13 +20,17 @@
     flex-direction: row;
     margin-top: 10rpx;
     justify-content: space-around;
-}
+    border-color: #f00;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 
 .news-list {
     display: flex;
     margin-top: 20rpx;
     margin-left: 20rpx;
-    
 }
 
 .news-title {
