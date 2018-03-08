@@ -1,0 +1,6 @@
+<!--pages/web/webview.wxml-->
+<view>
+
+    <web-view src="https://staging.baifotong.com/"></web-view>
+
+</view>

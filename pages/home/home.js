@@ -15,7 +15,9 @@ Page({
         duration: 3000,
         baifo: '../img/icon_lifo_new.png',
         fashi: '../img/icon_event_new.png',
-        fawu: '../img/icon_object_new.png'
+        fawu: '../img/icon_object_new.png',
+        animation: '',
+        count: true
     },
 
     /**
@@ -31,6 +33,7 @@ Page({
      */
     onReady: function () {
 
+        this.initAnimation()
     },
 
     /**
@@ -139,10 +142,10 @@ Page({
         wx.setStorage({
             key: 'news-item',
             data: bean,
-        })    
+        })
             // json参数太大 也无法全部传递
             < wx.navigateTo({
-            url: "/pages/news/news_detail",
+                url: "/pages/news/news_detail",
                 success: function (res) { },
                 fail: function (res) { },
                 complete: function (res) { },
@@ -152,27 +155,73 @@ Page({
     /**
      * 拜佛
      */
-    onBaifoClick : function(){
-        console.log("baifo====")
+    onBaifoClick: function () {
+        var y = 0;
+
+        if (this.data.count) {
+            y = 0;
+            this.setData({
+
+                count: false
+            })
+        } else {
+            y = 1;
+            this.setData({
+
+                count: true
+            })
+        }
+
+        this.animation.scaleY(y).step()
+        this.setData({
+            //输出动画
+            animation: this.animation.export()
+        })
+
+        // 恢复
+        // this.initAnimation()
+        // var that = this
+        // setTimeout(function(){
+        //     that.animation.rotate(0).step({
+        //         duration:0
+        //     })
+        //     that.setData({
+        //         //输出动画
+        //         animation: that.animation.export()
+        //     })
+        // },1000)
+
 
     },
     /**
     * 法事
     */
     onFashiClick: function () {
-        console.log("fashi====")
+
         wx.navigateTo({
             url: '/pages/event/event',
         })
 
     },
     /**
-    * 法务
+    * 法物
     */
     onFawuClick: function () {
-        console.log("faw====")
+        wx.navigateTo({
+            url: '/pages/web/webview',
+        })
+    },
 
+    initAnimation: function () {
+        this.animation = wx.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 300,
+            timingFunction: "linear",
+            delay: 0,
+            success: function (res) {
+                console.log(res)
+            }
+        })
     }
-
 })
 

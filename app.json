@@ -5,7 +5,8 @@
         "pages/logs/logs",
         "pages/news/news_detail",
         "pages/event/event",
-        "pages/userinfo/user-center"
+        "pages/userinfo/user-center",
+        "pages/web/webview"
     ],
     "window": {
         "backgroundTextStyle": "light",

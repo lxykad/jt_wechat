@@ -2,6 +2,5 @@
 
 <view class='container'>
     <image src='{{image}}' class='image'></image>
-    
     <rich-text nodes="{{desc}}" class='text'></rich-text>
 </view>

@@ -1,4 +1,5 @@
 
 <view>
     <video class = 'player' src="{{video}}"/>
+    <text>555555555555</text>
 </view>

@@ -13,6 +13,12 @@
         <image src="{{fashi}}" class='img' bindtap='onFashiClick' />
         <image src="{{fawu}}" class='img' bindtap='onFawuClick' />
     </view>
+
+    <view class='pray-container' animation="{{animation}}">
+        <image src="{{baifo}}" class='img-pray' bindtap='' />
+        <image src="{{fashi}}" class='img-pray' bindtap='' />
+    </view>
+
     <view wx:for="{{newsList}}" wx:key="{{index}}" class='news-list'>
 
         <view class='news-title' bindtap='onItemClick' data-item='{{item}}'>
