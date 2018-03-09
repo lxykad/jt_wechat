@@ -6,7 +6,8 @@
         "pages/news/news_detail",
         "pages/event/event",
         "pages/userinfo/user-center",
-        "pages/web/webview"
+        "pages/web/webview",
+        "pages/gank/skil"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -28,7 +29,7 @@
             },
             {
                 "text": "祝福",
-               "pagePath": "pages/logs/logs",
+                "pagePath": "pages/logs/logs",
                 "iconPath": "pages/img/iv_merits.png",
                 "selectedIconPath": "pages/img/iv_merits.png"
             },

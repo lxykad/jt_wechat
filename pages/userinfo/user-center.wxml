@@ -1,6 +1,6 @@
 <view class='container'>
     <image class='avatar' src='{{avatar}}' bindtap='onAvatarClick'/>
-    <text>见贤思齐</text>
+    <text class='pic'>见贤思齐</text>
     <text class='avatar-url'>{{avatar_url}}</text>
 
 

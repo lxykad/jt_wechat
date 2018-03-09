@@ -15,8 +15,8 @@
     </view>
 
     <view class='pray-container' animation="{{animation}}">
-        <image src="{{baifo}}" class='img-pray' bindtap='' />
-        <image src="{{fashi}}" class='img-pray' bindtap='' />
+        <image src="{{baifo}}" class='img-pray' bindtap='onPrayClick' />
+        <image src="{{fashi}}" class='img-pray' bindtap='onEventClick' />
     </view>
 
     <view wx:for="{{newsList}}" wx:key="{{index}}" class='news-list'>

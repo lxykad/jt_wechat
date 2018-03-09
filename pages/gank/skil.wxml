@@ -1,0 +1,9 @@
+<!--pages/gank/skil.wxml-->
+<import src="../template/listItemSkil.wxml" />
+<scroll-view>
+
+    <view wx:for="{{array}}" wx:key="{{index}}">
+        <template is="list-item-skil" data="{{desc:item.desc,who:item.who}}" />
+    </view>
+
+</scroll-view>

@@ -1,6 +1,6 @@
 <!--pages/web/webview.wxml-->
 <view>
 
-    <web-view src="https://staging.baifotong.com/"></web-view>
+    <web-view src="https://gank.io"></web-view>
 
 </view>

@@ -191,7 +191,7 @@ Page({
         //     })
         // },1000)
 
-
+         
     },
     /**
     * 法事
@@ -209,6 +209,26 @@ Page({
     onFawuClick: function () {
         wx.navigateTo({
             url: '/pages/web/webview',
+        })
+    },
+
+    /**
+     * 法事
+     */
+
+    onEventClick:function(){
+        wx.navigateTo({
+            url: '/pages/gank/skil',
+        })  
+    },
+
+    /**
+     * pray
+     */
+
+    onPrayClick: function () {
+        wx.showToast({
+            title: '开发中',
         })
     },
 

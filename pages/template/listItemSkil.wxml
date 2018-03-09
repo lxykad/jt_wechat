@@ -1,0 +1,8 @@
+
+
+<template name="list-item-skil">
+    <view class='item-container'>
+        <text>{{desc}}</text>
+        <text>{{who}}</text>
+    </view>
+</template>
