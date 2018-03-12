@@ -7,7 +7,8 @@ Page({
     data: {
         array: [],
         page: 1,
-        isLoading: false
+        isLoading: false,
+        hasMore: true
     },
 
     /**
@@ -25,26 +26,21 @@ Page({
     },
 
     /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
   * 页面相关事件处理函数--监听用户下拉动作
   */
     onPullDownRefresh: function () {
         console.log('下拉刷新')
+
+        this.loadData()
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-        var that = this
-        console.log('分页')
 
+        console.log('分页')
+        this.loadMore()
     },
 
     /**
@@ -53,15 +49,53 @@ Page({
     loadData: function () {
         var that = this
 
+        this.setData({
+            isLoading: false,
+            page: 1
+        })
+        console.log(that.data.page)
+
         wx.request({
-            url: 'https://gank.io/api/data/Android/10/1',
+            url: 'https://gank.io/api/data/Android/10/' + that.data.page,
             success: function (res) {
-                // console.log(res.data.results)
+
                 that.setData({
-                    array: res.data.results,
-                    page: that.page + 1
+                    array: res.data.results
                 })
-                console.log(that.page)
+                wx.stopPullDownRefresh()
+            }
+        })
+    },
+
+    /**
+     *  分页 加载更多
+     */
+    loadMore: function () {
+        if (this.data.array.lenght === 0 || this.data.isLoading) {
+            return;
+        }
+
+        console.log(this.data.isLoading)
+
+        var that = this
+        this.setData({
+            isLoading: true,
+            page: that.data.page + 1
+        })
+
+        console.log(that.data.page)
+        wx.request({
+            url: 'https://gank.io/api/data/Android/10/' + that.data.page,
+            success: function (res) {
+                that.setData({
+                    array: that.data.array.concat(res.data.results),
+                    isLoading: false,
+                })
+                if (res.data.results.lenght === 0) {
+                    that.setData({
+                        hasMore: false
+                    })
+                }
             }
         })
     }

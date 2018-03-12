@@ -5,5 +5,7 @@
     <view wx:for="{{array}}" wx:key="{{index}}">
         <template is="list-item-skil" data="{{desc:item.desc,who:item.who}}" />
     </view>
+    <view hidden='{{isLoading}}' class='loading'>加载更多……</view>
+    <view hidden='{{hasMore}}'>没有更多数据啦</view>
 
 </scroll-view>

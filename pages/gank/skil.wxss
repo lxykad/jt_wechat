@@ -1,2 +1,7 @@
 /* pages/gank/skil.wxss */
-@import "../template/skil.wxss"
+@import "../template/skil.wxss";
+
+.loading{
+    text-align: center;
+    padding: 5px;
+}
